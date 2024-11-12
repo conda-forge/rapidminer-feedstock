@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rapidminer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rapidminer-{{ version }}.tar.gz
   sha256: 0b44f218ebfa73efca014d170e8f692f458e34c501ecd0166f741d27aac7a5ba
 
 build:
@@ -16,10 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >= {{ python_min }}
     - pandas >=1
     - requests
     - numpy <2
@@ -46,4 +47,3 @@ about:
 extra:
   recipe-maintainers:
     - gypataricza-altair
-    - tjarvas-altair
