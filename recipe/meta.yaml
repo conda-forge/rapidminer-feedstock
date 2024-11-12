@@ -1,5 +1,7 @@
 {% set name = "rapidminer" %}
 {% set version = "2025.0.0" %}
+{% set python_min = "3.7" %}
+
 
 package:
   name: {{ name|lower }}
