@@ -146,5 +146,4 @@ Feedstock Maintainers
 =====================
 
 * [@gypataricza-altair](https://github.com/gypataricza-altair/)
-* [@tjarvas-altair](https://github.com/tjarvas-altair/)
 
