@@ -150,6 +150,3 @@ Feedstock Maintainers
 * [@manojgit109](https://github.com/manojgit109/)
 * [@tjarvas-altair](https://github.com/tjarvas-altair/)
 
-
-<!-- dummy commit to enable rerendering -->
-
