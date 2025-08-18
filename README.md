@@ -5,11 +5,18 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rapidminer-feed
 
 Home: https://github.com/rapidminer/python-rapidminer
 
-Package license: AGPL-3.0-only
+Package license: AGPL-3.0-or-later
 
 Summary: Tools for running RapidMiner processes and managing RapidMiner repositories.
 
+Development: https://github.com/rapidminer/python-rapidminer
+
 Documentation: https://docs.rapidminer.com/
+
+This Python package allows you to interact with Altair AI Studio and Altair AI Hub.
+You can collaborate using the Altair AI repository and leverage the scalable
+Altair AI Hub infrastructure to run processes.
+
 
 Current build status
 ====================
