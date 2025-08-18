@@ -1,6 +1,6 @@
 {% set name = "rapidminer" %}
-{% set version = "2025.1.0" %}
-{% set python_min = "3.7" %}
+{% set version = "2026.0.0" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rapidminer-{{ version }}.tar.gz
-  sha256: 58b6af810ef6f31344f156874a848c32f1c585ed8600dcfedb8fe339b0c99726
+  sha256: 2738cc17cbbf064096a403e5e79bd7cea41d42483d2a510f977d56807a89288b
 
 build:
   noarch: python
@@ -18,33 +18,40 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - pip
     - setuptools
+    - wheel
   run:
     - python >={{ python_min }}
-    - pandas >=1
-    - requests
-    - numpy <2
-    - zeep
-    - h5py
-    - cryptography
-    - pyjwt
+    - pandas >=2.2.0,<3.0.0
+    - requests >=2.31.0,<3.0.0
+    - numpy >=1.24.0,<3.0.0
+    - zeep >=4.2.0,<5.0.0
+    - h5py >=3.8.0,<4.0.0
+    - cryptography >=41.0.0,<50.0.0
+    - pyjwt >=2.8.0,<3.0.0
 
 test:
   imports:
     - rapidminer
   commands:
     - pip check
+    - python -c "import rapidminer; print('Version:', rapidminer.__version__)"
   requires:
     - pip
 
 about:
   home: https://github.com/rapidminer/python-rapidminer
   summary: Tools for running RapidMiner processes and managing RapidMiner repositories.
-  license: AGPL-3.0-only
+  description: |
+    This Python package allows you to interact with Altair AI Studio and Altair AI Hub.
+    You can collaborate using the Altair AI repository and leverage the scalable 
+    Altair AI Hub infrastructure to run processes.
+  license: AGPL-3.0-or-later
   license_file: LICENSE
   doc_url: https://docs.rapidminer.com/
+  dev_url: https://github.com/rapidminer/python-rapidminer
 
 extra:
   recipe-maintainers:
