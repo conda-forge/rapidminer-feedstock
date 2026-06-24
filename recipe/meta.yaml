@@ -1,5 +1,5 @@
 {% set name = "rapidminer" %}
-{% set version = "2026.0.1" %}
+{% set version = "2026.0.2" %}
 {% set python_min = "3.10" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rapidminer-{{ version }}.tar.gz
-  sha256: 14c3214ae61c1d7da08efa7c1bd63abf09180506bf8c266aedab38decf04b952
+  sha256: a7f264379c8df59b93780b81faf9c2a1c93d798bc29ecbaf001d8268a186c7df
 
 build:
   noarch: python
